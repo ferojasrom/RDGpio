@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import GPIO
+from .models import GPIOs
 
 # Register your models here.
-admin.site.register(GPIO)
+admin.site.register(GPIOs)

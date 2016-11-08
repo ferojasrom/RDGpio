@@ -3,7 +3,26 @@
         <title>Raspberry Pi 2 GPIO</title>
     </head>
     <body>
-        <p> Hola a todos! </p>
-        <p> Funciona! </p>
+            {% for pines in gpios %}
+            <div>
+                <h1><a href="">Pin: {{ pines.pin }}</a></h1>
+                <p>
+                    Configurado como:
+                    {% if pines.conf == True %}
+                        salida
+                    {% else %}
+                        entrada
+                    {% endif %}
+                </p>
+                <p>
+                    Su estado es:
+                    {% if pines.state == True %}
+                        alto
+                    {% else %}
+                        bajo
+                    {% endif %}
+                </p>
+            </div>
+            {% endfor %}
     </body>
 </html>
