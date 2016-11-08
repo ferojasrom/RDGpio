@@ -8,5 +8,5 @@ from django.utils import timezone
 class GPIO(models.Model):
     pin = models.IntegerField()
     conf = models.BooleanField(default=False)
-    state = models.BooleanField()
+    state = models.BooleanField(editable=False)
     
